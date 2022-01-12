@@ -48,7 +48,6 @@ p {
     font-weight: 400;
     font-size: 15px;
     line-height: 140%;
-    margin: auto 0;
 }
 
 .logo-img {
@@ -124,6 +123,14 @@ p {
     /*box-shadow: 0px 15px #C4C4C4;*/
     z-index: 10;
     position: relative;
+}
+
+.main-label {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: #1D2027;
+    padding: 50px 0;
 }
 
 .slide > .container {
@@ -702,6 +709,23 @@ input[name="r"] {
     visibility: hidden;
 }
 
+.amado-footer {
+    background: #263240;
+    padding: 25px 0;
+}
+
+.amado {
+    display: flex;
+    color: white;
+    justify-content: right;
+}
+
+.amado > p {
+    margin: auto 10px;
+    opacity: .5;
+}
+
+
 @media(max-width: 1024px) {
     .grid-list-concrete{
         grid-template-columns: 1fr 1fr;
@@ -714,6 +738,27 @@ input[name="r"] {
 }
 
 @media(max-width: 768px) {
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        width: 97%;
+    }
+
+    .main-label {
+        position: relative;
+        visibility: visible;
+    }
+
+    .main-label > .container > .rectangle {
+        visibility: visible;
+    }
+
+    .rectangle {
+        visibility: hidden;
+    }
 
     .burger {
         background: #0754A6;
@@ -858,19 +903,19 @@ input[name="r"] {
     }
 
     .rectangle230 {
-        top: 500px;
+        top: 1000px;
         width: 50%;
         height: 50%;
     }
 
     .rectangle229 {
-        top: 1650px;
+        top: 2150px;
         width: 50%;
         height: 50%;
     }
 
     .rectangle221 {
-        top: 3980px;
+        top: 4580px;
         width: 50%;
         height: 50%;
     }
@@ -878,11 +923,15 @@ input[name="r"] {
     .rectangle230-2 {
         width: 50%;
         height: 50%;
-        top: 5700px;
+        top: 6000px;
     }
 
     .video-section {
         margin-top: 100px;
+    }
+
+    .works-section {
+        padding: 50px 0;
     }
 }
 
@@ -896,18 +945,66 @@ input[name="r"] {
     }
 
     .rectangle230 {
-        top: 500px;
+        top: 1200px;
     }
 
     .rectangle229 {
-        top: 1650px;
+        top: 2300px;
     }
 
     .rectangle221 {
-        top: 3980px;
+        top: 4700px;
     }
 
     .rectangle230-2 {
-        width: 50%;
+        top: 6300px;
+    }
+}
+
+@media(max-width:480px) {
+    .footer-block {
+        flex-direction: column;
+    }
+
+    .footer-list {
+        flex-direction: column;
+    }
+
+    .footer-lbl {
+        font-size: 25px;
+    }
+
+    .soc-net > .soc-networks {
+        margin-top: 20px;
+        width: 200px;
+    }
+
+    .soc-net > .soc-networks > a {
+        transform: scale(1.5);
+    }
+
+    .rectangle230 {
+        top: 1200px;
+    }
+
+    .rectangle229 {
+        top: 2400px;
+    }
+
+    .rectangle221 {
+        top: 4650px;
+    }
+
+    .rectangle230-2 {
+        top: 6250px;
+    }
+
+    .menu {
+        width: 90%;
+        left: -90%;
+    }
+
+    .active {
+        left: 0;
     }
 }
