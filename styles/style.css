@@ -725,6 +725,10 @@ input[name="r"] {
     opacity: .5;
 }
 
+.phone-ico {
+    position: absolute;
+    visibility: hidden;
+}
 
 @media(max-width: 1024px) {
     .grid-list-concrete{
@@ -738,6 +742,14 @@ input[name="r"] {
 }
 
 @media(max-width: 768px) {
+
+    .phone-ico {
+        position: relative;
+        visibility: visible;
+        width: 30px;
+        height: 30px;
+        margin: auto 20px;
+    }
 
     .title {
         margin-bottom: 50px;
@@ -811,7 +823,7 @@ input[name="r"] {
 
     .menu {
         position: absolute;
-        top: 8%;
+        top: 9%;
         width: 50%;
         height: 75%;
         background: white;
@@ -933,6 +945,19 @@ input[name="r"] {
     .works-section {
         padding: 50px 0;
     }
+
+    .concrete-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .arrow > div {
+        width: 50px;
+    }
+
+    .arrow {
+        height: 35px;
+    }
 }
 
 @media(max-width: 525px) {
@@ -959,9 +984,33 @@ input[name="r"] {
     .rectangle230-2 {
         top: 6300px;
     }
+
+    .video-title {
+        width: 100%;
+        align-items: baseline;
+        font-size: 35px;
+        top: 35px;
+    }
+
+    .deliveries-header {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
 }
 
 @media(max-width:480px) {
+
+    .work-item > .concrete-block {
+        height: 300px;
+    }
+
+    .grid-list-concrete,
+    .grid-news,
+    .grid-works {
+        display: flex;
+        flex-direction: column;
+    }
+
     .footer-block {
         flex-direction: column;
     }
@@ -1006,5 +1055,10 @@ input[name="r"] {
 
     .active {
         left: 0;
+    }
+
+    .inline > .soc-networks {
+        position: absolute;
+        visibility: hidden;
     }
 }
