@@ -52,8 +52,9 @@ p {
 }
 
 .logo-img {
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
+    min-width: 135px;
 }
 
 .soc-networks {
@@ -108,6 +109,13 @@ p {
     position: sticky;
     top: -1px;
     z-index: 100;
+}
+
+.menu-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main {
@@ -683,8 +691,18 @@ input[name="r"] {
     box-sizing: border-box;
 }
 
+.menu-phone-item {
+    position: absolute;
+    visibility: hidden;
+}
 
-@media screen and (max-width: 1024px) {
+.mail-item {
+    position: absolute;
+    color: black;
+    visibility: hidden;
+}
+
+@media(max-width: 1024px) {
     .grid-list-concrete{
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 230px;
@@ -692,5 +710,204 @@ input[name="r"] {
 
     .concrete-item:first-child {
         grid-column: span 2;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .burger {
+        background: #0754A6;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        display: flex;
+    }
+
+    .burger > div {
+        width: 30px;
+        height: 2px;
+        background: white;
+        margin: auto;
+    }
+
+    .burger::after,
+    .burger::before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        position: relative;
+        background: white;
+        display: block;
+    }
+
+    .inline {
+        justify-content: right;
+        width: 100%;
+    }
+
+    .logo-img {
+        width: 50%;
+    }
+
+    .inline > .blue-button,
+    .gradient-button {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .phones-header {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .menu {
+        position: absolute;
+        top: 8%;
+        width: 50%;
+        height: 75%;
+        background: white;
+        left: -50%;
+        transition: all 1s ease;
+    }
+
+    .active {
+        left: 0;
+    }
+    
+    .menu-list {
+        height: 100%;
+        flex-direction: column;
+    }
+
+   .link-item {
+       color: black;
+   }
+
+   .link-item::after,
+   .link-item::before {
+       content: "";
+       width: 10px;
+       height: 1px;
+       position: absolute;
+       background: black;
+       display: block;
+       right: 0;
+   }
+
+   .link-item::after {
+       margin-top: -7px;
+       transform: rotate(-45deg);
+   }
+   
+   .link-item::before {
+       margin-top: 7px;
+       transform: rotate(45deg);
+   }
+
+   .concrete-phone {
+      margin: 20px 0;
+   }
+
+   .menu-phone-item {
+       position: relative;
+       visibility: visible;
+   }
+
+   .menu-phone-item::before,
+   .menu-phone-item::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        display: block;
+        opacity: .3;
+    }
+
+    .mail-item {
+        position: relative;
+        visibility: visible;
+    }
+
+    .mail-item > .mail {
+        color: black;
+    }
+    
+    .grid-news,
+    .grid-works {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-about {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .footer-list {
+        width: 100%;
+    }
+
+    .about {
+        display: block;
+    }
+    .text {
+        width: 100%;
+    }
+
+    .rectangle230 {
+        top: 500px;
+        width: 50%;
+        height: 50%;
+    }
+
+    .rectangle229 {
+        top: 1650px;
+        width: 50%;
+        height: 50%;
+    }
+
+    .rectangle221 {
+        top: 3980px;
+        width: 50%;
+        height: 50%;
+    }
+
+    .rectangle230-2 {
+        width: 50%;
+        height: 50%;
+        top: 5700px;
+    }
+
+    .video-section {
+        margin-top: 100px;
+    }
+}
+
+@media(max-width: 525px) {
+    .adventages {
+        display: block;
+    }
+
+    .adventage {
+        width: 100%;
+    }
+
+    .rectangle230 {
+        top: 500px;
+    }
+
+    .rectangle229 {
+        top: 1650px;
+    }
+
+    .rectangle221 {
+        top: 3980px;
+    }
+
+    .rectangle230-2 {
+        width: 50%;
     }
 }
